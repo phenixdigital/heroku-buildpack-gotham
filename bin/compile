@@ -15,6 +15,8 @@ export_env_dir() {
   fi
 }
 
+export_env_dir $3
+
 # Importing Gotham certificates
 echo "-----> Importing Gotham certificates"
 mkdir -p $BUILD_DIR/priv/certs
