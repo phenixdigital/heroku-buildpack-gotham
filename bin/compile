@@ -3,7 +3,6 @@
 
 # Importing Gotham certificates
 echo "-----> Importing Gotham certificates"
-mkdir $BUILD_DIR/certs
-cd $BUILD_DIR/certs
+mkdir certs && cd certs
 curl $GOTHAM_CERT_URL -o gotham-cert.pem
 curl $GOTHAM_KEY_URL -o gotham-key.pem
