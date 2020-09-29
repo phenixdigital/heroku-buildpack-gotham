@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir> <env-dir>
 
+### Configure directories
+BUILD_DIR=${1:-}
+
 # Importing Gotham certificates
 echo "-----> Importing Gotham certificates"
-cd priv
-mkdir certs && cd certs
+mkdir -p $BUILD_DIR/priv/certs
+cd $BUILD_DIR/priv/certs
 curl $GOTHAM_CERT_URL -o gotham-cert.pem
 curl $GOTHAM_KEY_URL -o gotham-key.pem
