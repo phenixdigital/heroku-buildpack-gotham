@@ -3,6 +3,7 @@
 
 ### Configure directories
 BUILD_DIR=${1:-}
+ENV_DIR=${3:-}
 
 # Importing Gotham certificates
 echo "-----> Importing Gotham certificates"
